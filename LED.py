@@ -15,12 +15,15 @@ IO.setup(11,IO.OUT)
 IO.setup(05,IO.OUT)
 
 leds = [2, 3, 4, 17, 27, 22, 10, 9, 11, 5]
-percentage = 10
+percentage = 15.6333 #input percentage
 
+percentage = int(round(percentage))
 if percentage % 10 >= 5:
-    percentage = percentage/10
-# round percentage, reduce to 0 to 9 or 1 to 10
+    percentage = int(round(percentage//10 + 1))
+# round percentage, reduce to 0 to 9
+percentage = percentage/10
 
-IO.out(leds[percentage], true)
+for i in range(percentage):
+    IO.out(leds[i], True)
 
 # when new percentage received, turn off leds and rerun program? can you run python scripts from python
