@@ -1,0 +1,3 @@
+https://stackoverflow.com/questions/4098131/how-to-update-a-plot-in-matplotlib/4098938#4098938
+https://stackoverflow.com/questions/4129697/how-do-i-display-real-time-graphs-in-a-simple-ui-for-a-python-program
+http://www.instructables.com/id/Plotting-real-time-data-from-Arduino-using-Python-/
