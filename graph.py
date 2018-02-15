@@ -19,9 +19,9 @@ import matplotlib.pyplot as plt; plt.rcdefaults()
 import numpy as np
 import matplotlib.pyplot as plt
  
-objects = ('Python', 'C++', 'Java', 'Perl', 'Scala', 'Lisp')
+objects = ('Car 1', 'Car 2', 'Car 3')
 y_pos = np.arange(len(objects))
-occupancy = [10,8,6,4,2,1]
+occupancy = [10,8,6]
  
 plt.bar(y_pos, occupancy, align='center', alpha=0.5)
 plt.xticks(y_pos, objects)
