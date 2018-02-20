@@ -17,15 +17,19 @@ for phase in np.linspace(0, 10*np.pi, 500):
 
 import matplotlib.pyplot as plt; plt.rcdefaults()
 import numpy as np
-import matplotlib.pyplot as plt
- 
-objects = ('Car 1', 'Car 2', 'Car 3')
+import matplotlib.pyplot
+
+objects = ('1', '2', '3')
 y_pos = np.arange(len(objects))
-occupancy = [10,8,6]
+occupancy = [85,80,60]
  
-plt.bar(y_pos, occupancy, align='center', alpha=0.5)
+plt.barh(y_pos, occupancy, align='center', alpha=.5)
+plt.yticks(y_pos, objects)
 plt.xticks(y_pos, objects)
-plt.ylabel('Usage')
-plt.title('Programming language usage')
- 
+plt.xlim(0, 100)
+plt.xlabel('Occupancy')
+plt.ylabel('Car Number')
+plt.title('Train Occupancy')
+
+
 plt.show()
