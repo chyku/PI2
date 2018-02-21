@@ -3,7 +3,10 @@
 import socket
 import time
 
-#Define host based on hostname -I
+# Define host based on hostname -I
+# can't find IP address of other thing;
+# find before demo, git push and git pull real quick
+# run server on pi1
 
 HOST = "192.168.43.7"     # Symbolic name meaning all available interfaces
 PORT = 5007               # Arbitrary non-privileged port
