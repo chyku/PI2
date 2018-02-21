@@ -3,7 +3,9 @@
 import socket
 import time
 
-HOST = "10.144.134.213"     # Symbolic name meaning all available interfaces
+#Define host based on hostname -I
+
+HOST = "192.168.43.7"     # Symbolic name meaning all available interfaces
 PORT = 5007               # Arbitrary non-privileged port
 
 # Create a TCP/IP socket
@@ -16,8 +18,8 @@ print ('Connected')
 try:
     
     # Send data
-    #!!! Define occupancy
-    msg = occupancy
+    #!!! Define occupancy, change to string from int
+    msg = '54'
     sock.send(msg.encode())
     print ('Sending Code...')
 

@@ -34,7 +34,7 @@ while(True):
         
         data = CONNECTION.recv(1024).decode("utf-8")
         print(data)
-        if data == '123':
+        if data == '54':
             msg = 'Authorized'
             print('Authorized Connection')
 
