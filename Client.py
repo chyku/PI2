@@ -16,7 +16,8 @@ print ('Connected')
 try:
     
     # Send data
-    msg = input("6 Digit Code: ")
+    #!!! Define occupancy
+    msg = occupancy
     sock.send(msg.encode())
     print ('Sending Code...')
 

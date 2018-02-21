@@ -5,20 +5,8 @@ import time
 
 import os
 
-#GPIO.setmode(GPIO.BOARD)
-#GPIO.setup(7, GPIO.OUT, initial = GPIO.LOW) # Green (blue really)
-#GPIO.setup(11, GPIO.OUT, initial = GPIO.LOW) # Red 
-
 HOST = ''
 PORT = 5007
-
-def find_env(file = ".env"):
-    os.open(file)
-
-    import RPi.GPIO as GPIO 
-
-
-
 
 #create a socket on the network using port 8080
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -56,15 +44,6 @@ while(True):
         elif(data == 'stop'):
             CONNECTION.close()
             break;
-
-        else:
-            msg = 'Denied'
-            print('Unauthorized Connection')
-            
-            CONNECTION.send(msg.encode("utf-8"))
-
-            #GPIO.output(7, GPIO.LOW)
-            #GPIO.output(11, GPIO.HIGH)
 
         CONNECTION.close()
 
