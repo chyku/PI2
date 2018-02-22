@@ -1,4 +1,5 @@
 #SERVER SIDE (PYTHON)
+# for pi2 = connected to monitor
 
 import socket
 import time
