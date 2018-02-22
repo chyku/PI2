@@ -34,14 +34,19 @@ while(True):
         
         data = CONNECTION.recv(1024).decode("utf-8")
         print(data)
-        if data == '54':
-            msg = 'Authorized'
-            print('Authorized Connection')
+        
+        # checking data value
+        # should send received if data = number?
+        # data to int
+        data = int(data)
+        if data <= 100:
+            msg = 'received'
+            print('Received')
 
             CONNECTION.send(msg.encode("utf-8"))
             #GPIO.output(7, GPIO.HIGH)
             #GPIO.output(11, GPIO.LOW)
-        elif(data == 'stop'):
+        else:
             CONNECTION.close()
             break;
 
@@ -50,7 +55,3 @@ while(True):
     except KeyboardInterrupt:
        s.close()
        CONNECTION.close()
-
-
-if __name__ == "__main__":
-    find_env()
