@@ -24,16 +24,13 @@ try:
     #!!! Define occupancy, change to string from int
     msg = '54'
     sock.send(msg.encode())
-    print ('Sending Code...')
+    print ('Sending occupancy')
 
     # Look for the response
     answer = sock.recv(1024).decode()
     #print(answer)       
-    if answer == 'Gucci':
-    	print ("Authorized")
-
-    else:
-        print('Not Authorized')
+    if answer == 'received':
+    	print ("Received")
 
 finally:
     sock.close()
